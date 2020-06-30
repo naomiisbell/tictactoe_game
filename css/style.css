@@ -80,4 +80,16 @@ body {
     border: solid;
 }
 
+.symbolX {
+    position: relative;
+    font-size: 200px;
+    font-family:  'Roboto', sans-serif;
+    cursor: pointer;
+}
 
+.symbolO {
+    position: relative;
+    font-size: 200px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
