@@ -1,15 +1,14 @@
-#wholepage {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 h1 {
     text-align: center;
 }
 
 h2 {
     text-align: center;
+}
+
+.rules {
+    text-align: left;
+    font-size: 25px;
 }
 
 body {
