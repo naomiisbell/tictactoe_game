@@ -27,7 +27,7 @@ body {
 
 }
 
-#parent {
+#blockParent {
     width: 600px;
     margin-left: 0 auto;
     display: grid;
@@ -81,15 +81,20 @@ body {
 }
 
 .symbolX {
-    position: relative;
     font-size: 200px;
     font-family:  'Roboto', sans-serif;
-    cursor: pointer;
+    cursor: move;
 }
 
 .symbolO {
-    position: relative;
     font-size: 200px;
     font-family: 'Roboto', sans-serif;
-    cursor: pointer;
+    cursor: move;
+}
+
+#symbols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 25%; 
 }

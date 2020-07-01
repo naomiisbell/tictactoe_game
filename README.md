@@ -20,3 +20,9 @@
 IF NO ONE GETS 3 IN A ROW
 
 -the game will restart that round and each player can place two symbols per turn
+
+
+
+SOURCES
+
+https://fonts.google.com
