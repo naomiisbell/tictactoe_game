@@ -101,3 +101,15 @@ for(count = 0; count < firstBlock.length; count++)
         this.append(draggedSymbol);
     });
 };
+
+
+
+===============
+
+function clickOnBlock() {
+
+}
+
+document.querySelectorAll('.block').forEach(block => block.addEventListener('click', clickOnBlock));
+
+console.log(clickOnBlock())
