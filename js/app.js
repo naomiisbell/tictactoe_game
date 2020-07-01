@@ -1,3 +1,26 @@
+class TicTacToe {
+    constructor() {
+        
+    }
+}
+
+
+class PlayerOne {
+    constructor(symbol) {
+        this.symbol = symbol
+    }
+};
+
+let playerOne = new PlayerOne('X')
+
+class PlayerTwo {
+    constructor(symbol) {
+        this.symbol = symbol
+    }
+};
+
+let playerTwo = new PlayerTwo('O')
+
 const winningArray = [
     [0, 1, 2],
     [3, 4, 5],
@@ -8,3 +31,6 @@ const winningArray = [
     [2, 4, 6],
     [0, 4, 8]
 ];
+
+
+

@@ -23,6 +23,11 @@ IF NO ONE GETS 3 IN A ROW
 
 
 
+
+
+
+
+
 SOURCES
 
 https://fonts.google.com
@@ -113,3 +118,10 @@ function clickOnBlock() {
 document.querySelectorAll('.block').forEach(block => block.addEventListener('click', clickOnBlock));
 
 console.log(clickOnBlock())
+
+
+
+notes:
+ 
+-the actors can get turned into classes (player one and two)
+-method and functions are interchangable (identify the actions)
