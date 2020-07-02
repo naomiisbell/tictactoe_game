@@ -33,7 +33,7 @@ const winningArray = [
 ];
 
 
-startOfGame()
+// startOfGame()
 
 let startOfGame = () => {
     let playerTurn = playerTwo;
