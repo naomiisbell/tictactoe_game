@@ -82,3 +82,9 @@ body {
     justify-content: space-between; 
     width: 25%; 
 }
+
+
+button {
+    width: 100%;
+    height: 90%;
+}

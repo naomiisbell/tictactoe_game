@@ -2,7 +2,7 @@ class TicTacToe {
     constructor() {
         
     }
-}
+};
 
 
 class PlayerOne {
@@ -43,3 +43,12 @@ function startOfGame() {
         console.log('player won')
     }
 };
+
+
+function clickOnBlock() {
+    let playerAnswer = prompt("X or O?")
+}
+
+document.getElementsByClassName('.block').forEach(block => block.addEventListener('click', clickOnBlock));
+
+console.log(clickOnBlock())
