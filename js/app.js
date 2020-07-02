@@ -44,11 +44,24 @@ function startOfGame() {
     }
 };
 
+let boardButton = document.querySelector('.btn-one')
+let boardButton = document.querySelector('.btn-two')
+let boardButton = document.querySelector('.btn-three')
+let boardButton = document.querySelector('.btn-four')
+let boardButton = document.querySelector('.btn-five')
+let boardButton = document.querySelector('.btn-six')
+let boardButton = document.querySelector('.btn-seven')
+let boardButton = document.querySelector('.btn-eight')
+let boardButton = document.querySelector('.btn-nine')
 
 function clickOnBlock() {
-    let playerAnswer = prompt("X or O?")
+    boardButton.innerHTML = 'X'
+    console.log("it's clicked")
 }
 
-document.getElementsByClassName('.block').forEach(block => block.addEventListener('click', clickOnBlock));
+boardButton.addEventListener('click', function(event){
+    clickOnBlock() 
+});
 
-console.log(clickOnBlock())
+
+
