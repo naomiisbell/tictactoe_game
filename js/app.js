@@ -44,6 +44,19 @@ let startOfGame = () => {
     }
 };
 
+let toggleVal = true;
+let toggle = (button) => {
+    if(toggleVal === true) {
+        button.innerHTML = 'X'
+        console.log("it's clicked")
+        toggleVal = false;
+    }else if(toggleVal === false) {
+        button.innerHTML = 'O'
+        console.log("it's clicked")
+        toggleVal = true;
+    }
+};
+
 let boardButton1 = document.querySelector('.btn-one')
 let boardButton2 = document.querySelector('.btn-two')
 let boardButton3 = document.querySelector('.btn-three')
@@ -55,9 +68,8 @@ let boardButton8 = document.querySelector('.btn-eight')
 let boardButton9 = document.querySelector('.btn-nine')
 
 let clickOnBlock = (button) => {
-    button.innerHTML = 'X'
-    console.log("it's clicked")
-}
+    toggle(button)
+};
 
 boardButton1.addEventListener('click', function(event){
     clickOnBlock(boardButton1) 
@@ -86,6 +98,4 @@ boardButton8.addEventListener('click', function(event){
 boardButton9.addEventListener('click', function(event){
     clickOnBlock(boardButton9) 
 });
-
-
 
