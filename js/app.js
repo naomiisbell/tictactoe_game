@@ -33,4 +33,13 @@ const winningArray = [
 ];
 
 
+startOfGame()
 
+function startOfGame() {
+    let playerTurn = playerTwo;
+    if(playerTurn !== winningArray) {
+        console.log('player ones turn')
+    }else {
+        console.log('player won')
+    }
+};
