@@ -11,9 +11,10 @@
 
 <body>
     <h1>SCORE</h1>
+    <p id="vs-text"></p>
     <p class="playerScores">
-        <span>Player One:</span>
-        <span>Player Two:</span>
+        <span>Player One: <b id="player1_score"></b>0</span>
+        <span>Player Two: <b id="player2_score"></b>0</span>
     </p>
 
 
@@ -51,6 +52,11 @@
     <div class="symbolX">x</div>
 
     <div class="symbolO">o</div>
+</div>
+
+<div class="win-alert">
+    <div data-win-alert></div>
+    <button id="playAgain">Play Again!</button>
 </div>
 
 
