@@ -30,6 +30,24 @@ let rowCheck = () => {
         }
     }
 }
+let colCheck = () => {
+
+    //!player 1
+    for (let i = 0; i < ticTacToe.length; i++) {
+        testArr = [ticTacToe[0][i],ticTacToe[1][i],ticTacToe[2][i]]
+        if ( testArr[i] == [1, 1, 1]) {
+            console.log("WIN")
+    }
+}
+    //!player 2
+    for (let i = 0; i < ticTacToe.length; i++) {
+        testArr = [ticTacToe[0][i],ticTacToe[1][i],ticTacToe[2][i]]
+        if ( testArr[i] == [0, 0, 0]) {
+            console.log("WIN")
+        }
+    }
+}
+
 
 let startOfGame = () => {
     let playerTurn = playerTwo;
