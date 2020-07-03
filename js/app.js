@@ -1,5 +1,3 @@
-
-
 class Player {
     constructor(symbol) {
         this.symbol = symbol
@@ -106,7 +104,25 @@ let diagCheck = () => {
     }
 }
 
+let boardCheck = () => {
+    
+    // loop the outer array
+    for (let i = 0; i < ticTacToe.length; i++) {
+        // get the size of the inner array
+        var innerArrayLength = ticTacToe[i].length;
+        // loop the inner array
+        for (let j = 0; j < innerArrayLength; j++) {
+            if (ticTacToe[i][j] !== 2) {
+                fillVal++;
+            }
+        }
+    }
 
+    if(fillVal == 9){
+        alert("Draw")
+    }
+
+}
 
 let toggleVal = false;
 let toggle = (button) => {
