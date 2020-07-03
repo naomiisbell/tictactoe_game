@@ -30,6 +30,7 @@ body {
 #blockParent {
     width: 600px;
     margin-left: 0 auto;
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
@@ -67,13 +68,11 @@ body {
 .symbolX {
     font-size: 200px;
     font-family:  'Roboto', sans-serif;
-    cursor: move;
 }
 
 .symbolO {
     font-size: 200px;
     font-family: 'Roboto', sans-serif;
-    cursor: move;
 }
 
 #symbols {
@@ -92,6 +91,13 @@ button {
     font-size: 150px;
 }
 
-.player2{
+.player2 {
     color: red;
+}
+
+.playerScores {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 25%; 
 }
