@@ -32,8 +32,13 @@ SOURCES
 
 https://fonts.google.com
 
+https://www.javascripttutorial.net/javascript-multidimensional-array/
 
+https://stackoverflow.com/questions/3115982/how-to-check-if-two-arrays-are-equal-with-javascript
 
+https://www.geeksforgeeks.org/how-to-create-two-dimensional-array-in-javascript/
+
+https://www.w3schools.com/jsref/prop_html_innerhtml.asp
 
 
 
@@ -52,4 +57,4 @@ console.log(clickOnBlock())
 notes:
  
 -the actors can get turned into classes (player one and two)
--method and functions are interchangable (identify the actions)
+-method and functions (identify the actions)

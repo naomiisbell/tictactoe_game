@@ -248,7 +248,7 @@ let ticTacToeGame = () => {
         }
     });
     //- !SECTION
-
+    
 };
 
 let drawVal = 0;
@@ -258,31 +258,32 @@ let player2_win = 0;
 
 let gameOutcome = (num) => {
 
-        if (num == 1) {
+    if (num == 2) {
 
-            console.log("player 2 WINS")
+        console.log("player 2 WINS")
 
+    }
+
+    if (num == 1) {
+
+        console.log("player 1 WINS")
+
+    }
+
+    if (num == 0) {
+
+        console.log("Draw")
+
+    }
+}
+
+
+for (let i = 0; i < 3; i++) {
+    gameOutcome(ticTacToeGame())
+    let playAgain = (answer) => {
+        prompt("Do you want to play again?")
+        if (answer == "yes") {
+            playAgain()
         }
-
-        if (num == 2) {
-
-            console.log("player 1 WINS")
-
-        }
-
-        if (num == 0) {
-
-            console.log("Draw")
-
-        }
-    };
-
-    for (let i = 0; i < 3; i++){
-        gameOutcome(ticTacToeGame())
-        let playAgain = (answer) => {
-            prompt("Do you want to play again?")
-            if(answer == "yes"){
-            ticTacToeGame()
-            }
-        }    // if user says yes no change, but if user types no use "break" to exit the loop 
-   };
+    } // if user says yes no change, but if user types no use "break" to exit the loop 
+};
