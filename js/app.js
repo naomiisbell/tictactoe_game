@@ -14,7 +14,7 @@ const winningDiaArray = [
 ];
 
 
-
+// SECTION
 let rowCheck = () => {
 
     //!player 1
@@ -30,6 +30,8 @@ let rowCheck = () => {
         }
     }
 }
+
+
 let colCheck = () => {
 
     //!player 1
@@ -47,6 +49,7 @@ let colCheck = () => {
         }
     }
 }
+//- !SECTION
 
 
 let startOfGame = () => {
