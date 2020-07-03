@@ -46,14 +46,14 @@ let ticTacToeGame = () => {
         for (let i = 0; i < ticTacToe.length; i++) {
             if (compArr(ticTacToe[i], winValArr)) {
                 console.log("WIN")
-                alert("WIN")
+                return "WIN"
             }
         }
         //!player 2
         for (let i = 0; i < ticTacToe.length; i++) {
             if (compArr(ticTacToe[i], winValArr_2)) {
                 console.log("WIN")
-                alert("WIN")
+                return "WIN"
             }
         }
     };
@@ -66,7 +66,7 @@ let ticTacToeGame = () => {
             testArr = [ticTacToe[0][i], ticTacToe[1][i], ticTacToe[2][i]]
             if (compArr(testArr, winValArr)) {
                 console.log("WIN")
-                alert("WIN")
+                return "WIN"
             }
         }
         //!player 2
@@ -74,7 +74,7 @@ let ticTacToeGame = () => {
             testArr = [ticTacToe[0][i], ticTacToe[1][i], ticTacToe[2][i]]
             if (compArr(testArr, winValArr_2)) {
                 console.log("WIN")
-                alert("WIN")
+                return "WIN"
             }
         }
     };
@@ -85,29 +85,29 @@ let ticTacToeGame = () => {
         //!left to right diagonal
         if (compArr([ticTacToe[0][0], ticTacToe[1][1], ticTacToe[2][2]], winValArr)) {
             console.log("WIN")
-            alert("WIN")
+            return "WIN"
 
         }
         //!right to left diagonal
         if (compArr([ticTacToe[2][0], ticTacToe[1][1], ticTacToe[0][2]], winValArr)) {
             console.log("WIN")
-            alert("WIN")
+            return "WIN"
         }
         //!left to right diagonal
         if (compArr([ticTacToe[0][0], ticTacToe[1][1], ticTacToe[2][2]], winValArr_2)) {
             console.log("WIN")
-            alert("WIN")
+            return "WIN"
 
         }
         //!right to left diagonal
         if (compArr([ticTacToe[2][0], ticTacToe[1][1], ticTacToe[0][2]], winValArr_2)) {
             console.log("WIN")
-            alert("WIN")
+            return "WIN"
         }
     }
 
     let boardCheck = () => {
-
+        let fillVal = 0;
         // loop the outer array
         for (let i = 0; i < ticTacToe.length; i++) {
             // get the size of the inner array
@@ -121,7 +121,7 @@ let ticTacToeGame = () => {
         }
 
         if (fillVal == 9) {
-            alert("Draw")
+            return "Draw"
         }
 
     }
@@ -250,3 +250,39 @@ let ticTacToeGame = () => {
     //- !SECTION
 
 };
+
+let drawVal = 0;
+let rounds = 3; // can prompt user for number of rounds
+let player1_win = 0;
+let player2_win = 0;
+
+let gameOutcome = (num) => {
+
+        if (num == 1) {
+
+            console.log("player 2 WINS")
+
+        }
+
+        if (num == 2) {
+
+            console.log("player 1 WINS")
+
+        }
+
+        if (num == 0) {
+
+            console.log("Draw")
+
+        }
+    };
+
+    for (let i = 0; i < 3; i++){
+        gameOutcome(ticTacToeGame())
+        let playAgain = (answer) => {
+            prompt("Do you want to play again?")
+            if(answer == "yes"){
+            ticTacToeGame()
+            }
+        }    // if user says yes no change, but if user types no use "break" to exit the loop 
+   };
