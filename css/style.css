@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    font-size: 50px;
 }
 
 h2 {
@@ -160,13 +161,6 @@ body {
     color: red;
 }
 
-.playerScores {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 25%; 
-}
-
 .win-alert {
     display: none;
     position: fixed;
@@ -186,4 +180,13 @@ body {
 #playAgain {
     font-size: 25px;
     background-color: pink;
+}
+
+#startGame {
+    font-size: 50px;
+    background-color: pink;
+}
+
+#startGame:hover {
+    background-color: hotpink;
 }
