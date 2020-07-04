@@ -12,6 +12,7 @@ h2 {
 }
 
 body {
+    margin: 0;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -83,7 +84,71 @@ body {
 }
 
 
-button {
+.btn-one {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-two {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-three {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-four {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-five {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-six {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-seven {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-eight {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+}
+
+.btn-nine {
     background: transparent;
     border: none;
     width: 100%;
@@ -102,3 +167,23 @@ button {
     width: 25%; 
 }
 
+.win-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.win-alert.show {
+    display: flex;
+}
+
+#playAgain {
+    font-size: 25px;
+    background-color: pink;
+}
