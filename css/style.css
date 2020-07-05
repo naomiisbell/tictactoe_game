@@ -190,3 +190,9 @@ body {
 #startGame:hover {
     background-color: hotpink;
 }
+
+.btn-ten {
+    width: 100%;
+    height: 100%;
+    
+}
