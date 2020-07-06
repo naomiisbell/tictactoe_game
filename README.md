@@ -42,6 +42,9 @@ https://www.w3schools.com/jsref/prop_html_innerhtml.asp
 
 https://www.w3schools.com/tags/tag_b.asp
 
+https://www.w3schools.com/jsref/event_onclick.asp
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 
 ===============
