@@ -48,6 +48,8 @@ https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 https://colorhunt.co/palette/192115
 
+https://www.youtube.com/watch?v=Y-GkMjUZsmM&t=2197s (i used this one mostly for the play again button but couldn't get it to work)
+
 
 ===============
 
