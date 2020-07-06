@@ -4,7 +4,7 @@ h1 {
 }
 
 span{
-    color: red;
+    color: #916dd5;
 }
 
 h2 {
@@ -21,7 +21,7 @@ body {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: #b2ebf2;
+    background-color: #f0e3ff;
 }
 
 #rules {
@@ -171,8 +171,12 @@ body {
     cursor: pointer;
 }
 
+.player1 {
+    color: #400082;
+}
+
 .player2 {
-    color: red;
+    color: #916dd5;
 }
 
 #playAgain {
@@ -183,7 +187,8 @@ body {
 }
 
 #playAgain:hover {
-    background-color: red;
+    background-color: #3e206d;
+    color: white;
     cursor: pointer;
 }
 
@@ -193,5 +198,7 @@ body {
 }
 
 #startGame:hover {
-    background-color: red;
+    background-color: #3e206d;
+    color: white;
+    cursor: pointer;
 }
