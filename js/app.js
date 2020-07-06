@@ -196,7 +196,7 @@ let ticTacToeGame = () => {
     let boardButton7 = document.querySelector('.btn-seven')
     let boardButton8 = document.querySelector('.btn-eight')
     let boardButton9 = document.querySelector('.btn-nine')
-    let boardButton10 = document.querySelector('.btn-ten')
+    let playAgainButton = document.getElementById('playAgain')
 
     let clickOnBlock = (button) => {
         toggle(button)
@@ -205,6 +205,7 @@ let ticTacToeGame = () => {
     let clearBlock = (button) => {
         button.innerHTML = ' '
     };
+
     let winChecks = () => {
         rowCheck()
         colCheck()
@@ -236,7 +237,7 @@ let ticTacToeGame = () => {
         console.log(ticTacToe)
     });
     boardButton4.addEventListener('click', function (event) {
-        if (ticTacToe[1][0] == 2)
+        if (ticTacToe[1][0] == 2 && gameEnd !== true)
             clickOnBlock(boardButton4)
         ticTacToe[1][0] = ticTacToeArrVal
         winChecks()
@@ -277,7 +278,7 @@ let ticTacToeGame = () => {
         winChecks()
         console.log(ticTacToe)
     });
-    boardButton10.addEventListener('click', function (event) {
+    playAgainButton.addEventListener('click', function (event) {
         ticTacToe = [
             [2, 2, 2],
             [2, 2, 2],
@@ -292,16 +293,18 @@ let ticTacToeGame = () => {
         clearBlock(boardButton7)
         clearBlock(boardButton8)
         clearBlock(boardButton9)
+        gameEnd = false;
 
-        if (player1_win > 0) {
-            alert(player1_win)
-        }
-        if (player2_win > 0) {
-            alert(player2_win)
-        }
-        if (drawVal > 0) {
-            alert(drawVal)
-        }
+
+        // if (player1_win > 0) {
+        //     alert(player1_win)
+        // }
+        // if (player2_win > 0) {
+        //     alert(player2_win)
+        // }
+        // if (drawVal > 0) {
+        //     alert(drawVal)
+        // }
 
     });
     //- !SECTION
@@ -311,9 +314,6 @@ let ticTacToeGame = () => {
 
 ticTacToeGame()
 
-// console.log(player1_win);
-// console.log(player2_win);
-// console.log(drawVal);
 
 
 // need to return functionality from my game
