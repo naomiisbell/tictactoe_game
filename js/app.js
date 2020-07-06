@@ -175,7 +175,7 @@ let ticTacToeGame = () => {
 
         //! Player 1
         if (toggleVal === false) {
-            button.innerHTML = playerOne.symbol //* Unique symbols
+            button.innerHTML = `<span class="player1">${playerOne.symbol}</span>` //* Unique symbols
             console.log("it's clicked")
             ticTacToeArrVal = 1; // 1 = X
             toggleVal = true;
