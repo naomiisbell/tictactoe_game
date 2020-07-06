@@ -1,6 +1,7 @@
 let player1_win = 0;
 let player2_win = 0;
 let drawVal = 0;
+let gameEnd = false;
 
 
 let ticTacToeGame = () => {
@@ -52,6 +53,7 @@ let ticTacToeGame = () => {
             if (compArr(ticTacToe[i], winValArr)) {
                 console.log("WIN")
                 alert("player 1 WINS")
+                gameEnd = true;
                 player1_win++;
                 break;
             }
@@ -61,6 +63,7 @@ let ticTacToeGame = () => {
             if (compArr(ticTacToe[i], winValArr_2)) {
                 console.log("WIN")
                 alert("player 2 WINS")
+                gameEnd = true;
                 player2_win++;
                 break;
             }
@@ -76,6 +79,7 @@ let ticTacToeGame = () => {
             if (compArr(testArr, winValArr)) {
                 console.log("WIN")
                 alert("player 1 WINS")
+                gameEnd = true;
                 player1_win++;
                 break;
             }
@@ -86,6 +90,7 @@ let ticTacToeGame = () => {
             if (compArr(testArr, winValArr_2)) {
                 console.log("WIN")
                 alert("player 2 WINS")
+                gameEnd = true;
                 player2_win++;
                 break;
             }
@@ -99,6 +104,7 @@ let ticTacToeGame = () => {
         if (compArr([ticTacToe[0][0], ticTacToe[1][1], ticTacToe[2][2]], winValArr)) {
             console.log("WIN")
             alert("player 1 WINS")
+            gameEnd = true;
             player1_win++;
 
 
@@ -107,6 +113,7 @@ let ticTacToeGame = () => {
         if (compArr([ticTacToe[2][0], ticTacToe[1][1], ticTacToe[0][2]], winValArr)) {
             console.log("WIN")
             alert("player 1 WINS")
+            gameEnd = true;
             player1_win++;
 
         }
@@ -114,6 +121,7 @@ let ticTacToeGame = () => {
         if (compArr([ticTacToe[0][0], ticTacToe[1][1], ticTacToe[2][2]], winValArr_2)) {
             console.log("WIN")
             alert("player 2 WINS")
+            gameEnd = true;
             player2_win++;
 
 
@@ -122,6 +130,7 @@ let ticTacToeGame = () => {
         if (compArr([ticTacToe[2][0], ticTacToe[1][1], ticTacToe[0][2]], winValArr_2)) {
             console.log("WIN")
             alert("player 2 WINS")
+            gameEnd = true;
             player2_win++;
 
         }
@@ -144,6 +153,7 @@ let ticTacToeGame = () => {
         if (fillVal == 9) {
             console.log("Draw")
             alert("Draw")
+            gameEnd = true;
             drawVal++;
 
         }
@@ -203,7 +213,7 @@ let ticTacToeGame = () => {
     }
 
     boardButton1.addEventListener('click', function (event) {
-        if (ticTacToe[0][0] == 2) {
+        if (ticTacToe[0][0] == 2 && gameEnd !== true) {
             clickOnBlock(boardButton1)
             ticTacToe[0][0] = ticTacToeArrVal
             winChecks()
@@ -212,14 +222,14 @@ let ticTacToeGame = () => {
 
     });
     boardButton2.addEventListener('click', function (event) {
-        if (ticTacToe[0][1] == 2)
+        if (ticTacToe[0][1] == 2 && gameEnd !== true)
             clickOnBlock(boardButton2)
         ticTacToe[0][1] = ticTacToeArrVal
         winChecks()
         console.log(ticTacToe)
     });
     boardButton3.addEventListener('click', function (event) {
-        if (ticTacToe[0][2] == 2)
+        if (ticTacToe[0][2] == 2 && gameEnd !== true)
             clickOnBlock(boardButton3)
         ticTacToe[0][2] = ticTacToeArrVal
         winChecks()
@@ -233,34 +243,35 @@ let ticTacToeGame = () => {
         console.log(ticTacToe)
     });
     boardButton5.addEventListener('click', function (event) {
-        if (ticTacToe[1][1] == 2)
+        if (ticTacToe[1][1] == 2 && gameEnd !== true)
             clickOnBlock(boardButton5)
         ticTacToe[1][1] = ticTacToeArrVal
         winChecks()
         console.log(ticTacToe)
     });
     boardButton6.addEventListener('click', function (event) {
-        if (ticTacToe[1][2] == 2)
+        if (ticTacToe[1][2] == 2 && gameEnd !== true)
             clickOnBlock(boardButton6)
         ticTacToe[1][2] = ticTacToeArrVal
         winChecks()
         console.log(ticTacToe)
     });
     boardButton7.addEventListener('click', function (event) {
-        if (ticTacToe[2][0] == 2)
+        if (ticTacToe[2][0] == 2 && gameEnd !== true)
             clickOnBlock(boardButton7)
         ticTacToe[2][0] = ticTacToeArrVal
         winChecks()
         console.log(ticTacToe)
     });
     boardButton8.addEventListener('click', function (event) {
-        clickOnBlock(boardButton8)
+        if (ticTacToe[2][1] == 2 && gameEnd !== true)
+            clickOnBlock(boardButton8)
         ticTacToe[2][1] = ticTacToeArrVal
         winChecks()
         console.log(ticTacToe)
     });
     boardButton9.addEventListener('click', function (event) {
-        if (ticTacToe[2][2] == 2)
+        if (ticTacToe[2][2] == 2 && gameEnd !== true)
             clickOnBlock(boardButton9)
         ticTacToe[2][2] = ticTacToeArrVal
         winChecks()

@@ -60,3 +60,8 @@ notes:
  
 -the actors can get turned into classes (player one and two)
 -method and functions (identify the actions)
+
+
+what wiley wants me to change 
+-way to track rounds 
+-and reset score 
