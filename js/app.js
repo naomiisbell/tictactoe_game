@@ -1,26 +1,29 @@
+// global variables
 let player1_win = 0;
 let player2_win = 0;
 let drawVal = 0;
 let gameEnd = false;
 
-
+// this function contains the entire game
 let ticTacToeGame = () => {
 
-
+    // create a class of the actors in the game 
     class Player {
         constructor(symbol) {
             this.symbol = symbol
         }
     };
 
-
+    // player one and two symbols defined here
     let playerOne = new Player("X");
     let playerTwo = new Player("O");
 
     let ticTacToeArrVal = 1;
-    //quick comment
+    // the 2d array is set to equal all 2's which in the code is represented by empty buttons 
+    // the array values are what we wanna change for each letter to track wins
 
     //takes two arrays
+    // tracking the elements in the array to see if there is a winValArr
     let compArr = (array_1, array_2) => {
         if (array_1 === array_2) {
             return true; //they are equal to each other
@@ -42,18 +45,20 @@ let ticTacToeGame = () => {
         return true; // if all statements are false the function will return true
     };
 
-    let winValArr = [1, 1, 1]
-    let winValArr_2 = [0, 0, 0]
+    let winValArr = [1, 1, 1] //for X
+    let winValArr_2 = [0, 0, 0] // for O
 
     // SECTION
+    //checks for a win in a row
     let rowCheck = () => {
 
         //!player 1
         for (let i = 0; i < ticTacToe.length; i++) {
+            //for loop that iterates through the length of the ticTacToe array checking for the winValArr 
             if (compArr(ticTacToe[i], winValArr)) {
                 console.log("WIN")
                 alert("player 1 WINS")
-                gameEnd = true;
+                gameEnd = true; //if the winValArr is the same the end of the game is true
                 player1_win++;
                 break;
             }
@@ -70,11 +75,13 @@ let ticTacToeGame = () => {
         }
     };
 
-
+    //checks for win in a column
     let colCheck = () => {
 
         //!player 1
         for (let i = 0; i < ticTacToe.length; i++) {
+            // these square brackets are used to recognize each block on the board 
+            // the TTT board is similar to a graph
             testArr = [ticTacToe[0][i], ticTacToe[1][i], ticTacToe[2][i]]
             if (compArr(testArr, winValArr)) {
                 console.log("WIN")
@@ -98,6 +105,7 @@ let ticTacToeGame = () => {
     };
     //- !SECTION
 
+    // checks for a win diagonally
     let diagCheck = () => {
 
         //!left to right diagonal
@@ -136,6 +144,7 @@ let ticTacToeGame = () => {
         }
     }
 
+    // checks for a draw
     let boardCheck = () => {
         let fillVal = 0;
         // loop the outer array
@@ -149,7 +158,7 @@ let ticTacToeGame = () => {
                 }
             }
         }
-
+        // if the entire board is filled (9) and does not pass one of the win checks then it is a draw
         if (fillVal == 9) {
             console.log("Draw")
             alert("Draw")
@@ -160,6 +169,7 @@ let ticTacToeGame = () => {
 
     }
 
+    // this functions switches turns between the two symbols
     let toggleVal = false;
     let toggle = (button) => {
 
@@ -167,19 +177,20 @@ let ticTacToeGame = () => {
         if (toggleVal === false) {
             button.innerHTML = playerOne.symbol //* Unique symbols
             console.log("it's clicked")
-            ticTacToeArrVal = 1;
+            ticTacToeArrVal = 1; // 1 = X
             toggleVal = true;
 
             //! player 2        
+            //this will change the values in every button in the array which will determine the win
         } else if (toggleVal === true) {
-            //button.innerHTML = playerTwo.symbol
             button.innerHTML = `<span class="player2">${playerTwo.symbol}</span>`
             console.log("it's clicked")
-            ticTacToeArrVal = 0;
+            ticTacToeArrVal = 0; // 0 = O
             toggleVal = false;
         }
     };
 
+    // an array within an array
     let ticTacToe = [
         [2, 2, 2],
         [2, 2, 2],
@@ -198,10 +209,13 @@ let ticTacToeGame = () => {
     let boardButton9 = document.querySelector('.btn-nine')
     let playAgainButton = document.getElementById('playAgain')
 
+    // function in order to be able to click on the button 
     let clickOnBlock = (button) => {
+        //calls the toggle function which switches between players
         toggle(button)
 
     };
+    //function that will clear the board if the players want to play again
     let clearBlock = (button) => {
         button.innerHTML = ' '
     };
@@ -214,8 +228,11 @@ let ticTacToeGame = () => {
     }
 
     boardButton1.addEventListener('click', function (event) {
+        // if the button equals 2 which is the original array it cannot be clicked
+        // if the gameEnd is not true it cannot be clicked after it has already been clicked
         if (ticTacToe[0][0] == 2 && gameEnd !== true) {
             clickOnBlock(boardButton1)
+            // when it is clicked that block will change it's value depending on who's turn it is
             ticTacToe[0][0] = ticTacToeArrVal
             winChecks()
             console.log(ticTacToe)
@@ -293,7 +310,7 @@ let ticTacToeGame = () => {
         clearBlock(boardButton7)
         clearBlock(boardButton8)
         clearBlock(boardButton9)
-        gameEnd = false;
+        gameEnd = false; // if the gameEnd is false they can actually play again 
 
 
         // if (player1_win > 0) {
