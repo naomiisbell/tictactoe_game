@@ -41,6 +41,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
+    color: #3e206d;
 }
 
 .block {
@@ -75,11 +76,13 @@ body {
 .symbolX {
     font-size: 200px;
     font-family:  'Roboto', sans-serif;
+    color: #400082;
 }
 
 .symbolO {
     font-size: 200px;
     font-family: 'Roboto', sans-serif;
+    color: #916dd5;
 }
 
 #symbols {
